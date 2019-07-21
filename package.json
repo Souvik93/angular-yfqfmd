@@ -13,7 +13,9 @@
     "@ngrx/core": "^1.2.0",
     "@ngrx/effects": "^8.1.0",
     "@ngrx/store": "8.1.0",
+    "angular-star-rating": "^3.0.8",
     "core-js": "2",
+    "ng-starrating": "^1.0.7",
     "rxjs": "^6.5.2",
     "zone.js": "^0.9.1"
   },

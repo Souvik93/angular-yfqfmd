@@ -2,3 +2,20 @@
 <p>
   Start editing to see some magic happen :)
 </p>
+
+
+<div>
+  <button (click)="onRandom()">Rate Randomly</button>
+</div>
+<div>
+  <ol>
+
+    <li *ngFor="let movie of myMovies | sort: 'ratings';let i = index">
+      <span>{{movie.name}}</span>
+      <span>
+        <star-rating value={{movie.ratings}} checkedcolor="red" uncheckedcolor="black" size="24px"  readonly="false" (rate)="onRate($event,i)"></star-rating>
+      </span>
+    </li>
+
+  </ol>
+</div>

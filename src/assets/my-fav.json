@@ -1,0 +1,21 @@
+[{
+  "name": "Movie 1",
+  "ratings": 4
+},
+{
+  "name": "Movie 2",
+  "ratings": 3
+},
+{
+  "name": "Movie 3",
+  "ratings": 2
+},
+{
+  "name": "Movie 4",
+  "ratings": 1
+},
+{
+  "name": "Movie 5",
+  "ratings": 5
+}
+]
