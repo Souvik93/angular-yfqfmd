@@ -10,6 +10,8 @@ import {AppService} from './app.service';
 export class AppComponent  {
 
   myMovies: any = [];
+  isRandomClicked = false;
+  intervalDetails: any;
 
   constructor(private appService: AppService) {
     this.getDataFromJSON();
@@ -35,11 +37,23 @@ export class AppComponent  {
     });
   }
 
-  onRandom() {
+  onRandom(): void {
+    this.isRandomClicked = !this.isRandomClicked;
     
-    this.myMovies.forEach(movie => {
-      movie.ratings = this.randomIntFromInterval(1,5);
-    });
+    if (this.isRandomClicked) {
+     this.intervalDetails = setInterval(() => {
+           console.log('Interval Start');
+           this.randomlyRate();
+       }, this.randomIntFromInterval(1000,5000));
+    } else {
+      console.log('Interval Stop');
+      // console.log(clearInterval(varConst));
+      clearInterval(this.intervalDetails);
+    } 
+  }
+
+  randomlyRate(): void {
+    this.myMovies[this.randomIntFromInterval(0,this.myMovies.length - 1)].ratings = this.randomIntFromInterval(1,5);
     this.myMovies.sort((a,b) => a.ratings-b.ratings);
   }
 
