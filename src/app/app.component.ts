@@ -4,6 +4,7 @@ import { AppService } from './app.service';
 import { Store , select } from '@ngrx/store';
 import { MovieState } from './app.state';
 import { GetMovieDetails } from './app.actions';
+import { selectMoviesList } from './app.selectors'
 
 @Component({
   selector: 'my-app',
