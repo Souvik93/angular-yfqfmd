@@ -8,7 +8,7 @@ import { of } from 'rxjs';
 import { switchMap  } from 'rxjs/operators';
 
 @Injectable()
-export class AppEffects {
+export class MoviesEffects  {
   @Effect()
   getMovirs$ = this.action.pipe(
     ofType<GetMovieDetails>(MovieDetailsActions.GetMovieDetails),

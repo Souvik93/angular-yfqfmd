@@ -1,6 +1,9 @@
 import { Component } from '@angular/core';
 import { StarRatingComponent } from 'ng-starrating';
-import {AppService} from './app.service';
+import { AppService } from './app.service';
+import { Store , select } from '@ngrx/store';
+import { MovieState } from './app.state';
+import { GetMovieDetails } from './app.actions';
 
 @Component({
   selector: 'my-app',
@@ -13,16 +16,14 @@ export class AppComponent  {
   isRandomClicked = false;
   intervalDetails: any;
 
-  constructor(private appService: AppService) {
+  constructor(private appService: AppService , private store: Store<MovieState>) {
     this.getDataFromJSON();
+    this.store.dispatch(new GetMovieDetails());
   }
   name = 'Angular';
 
     onRate($event:{oldValue:number, newValue:number, starRating:StarRatingComponent}, i:number) {
-     alert(`Old Value:${$event.oldValue}, 
-      New Value: ${$event.newValue}, 
-      Checked Color: ${$event.starRating.checkedcolor}, 
-      Unchecked Color: ${$event.starRating.uncheckedcolor}`);
+    
     this.myMovies[i].ratings = $event.newValue;
     this.myMovies.sort((a,b) => a.ratings-b.ratings);
     console.log('Hey There !! From onRate');
