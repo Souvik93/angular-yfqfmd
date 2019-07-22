@@ -4,7 +4,7 @@ import { AppService } from './app.service';
 import { Store , select } from '@ngrx/store';
 import { MovieState } from './app.state';
 import { GetMovieDetails } from './app.actions';
-import { selectMoviesList } from './app.selectors'
+import { selectMoviesList } from './app.selector'
 
 @Component({
   selector: 'my-app',
@@ -16,10 +16,16 @@ export class AppComponent  {
   myMovies: any = [];
   isRandomClicked = false;
   intervalDetails: any;
+  config$: any;
 
   constructor(private appService: AppService , private store: Store<MovieState>) {
     this.getDataFromJSON();
     this.store.dispatch(new GetMovieDetails());
+    this.config$ = this.store.pipe(select(selectMoviesList));
+    this.config$.subscribe(response => {
+      console.log('Hey There !! From Store Subscriber.');
+      console.log(response);
+    })
   }
   name = 'Angular';
 
