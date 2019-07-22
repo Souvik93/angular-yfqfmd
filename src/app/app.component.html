@@ -1,11 +1,14 @@
 <hello name="{{ name }}"></hello>
 <p>
-  Start editing to see some magic happen :)
+  Start rating your favourite movies :)
 </p>
 
 
 <div>
-  <button (click)="onRandom()">Rate Randomly</button>
+  <button class="button" (click)="onRandom()" *ngIf="!isRandomClicked else notRandom"><span>Start Rating Randomly </span></button>
+  <ng-template #notRandom>
+    <button class="button" (click)="onRandom()"><span>Stop Rate Randomly</span></button>
+  </ng-template>
 </div>
 <div>
   <ol>
