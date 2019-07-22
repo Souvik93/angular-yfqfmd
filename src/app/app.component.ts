@@ -33,14 +33,11 @@ export class AppComponent  {
     
     this.myMovies[i].ratings = $event.newValue;
     this.myMovies.sort((a,b) => a.ratings-b.ratings);
-    console.log('Hey There !! From onRate');
-    console.log(this.myMovies);
+  
   }
 
   getDataFromJSON() {
     this.appService.getMovies().subscribe(res => {
-      console.log('Hey There!! From getDataJSON Service');
-      console.log(res);
       this.myMovies = res;
     });
   }
