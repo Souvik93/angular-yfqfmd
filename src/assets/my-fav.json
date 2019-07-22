@@ -17,5 +17,25 @@
 {
   "name": "Movie 5",
   "ratings": 5
+},
+{
+  "name": "Movie 6",
+  "ratings": 2
+},
+{
+  "name": "Movie 7",
+  "ratings": 5
+},
+{
+  "name": "Movie 8",
+  "ratings": 5
+},
+{
+  "name": "Movie 9",
+  "ratings": 5
+},
+{
+  "name": "Movie 10",
+  "ratings": 5
 }
 ]
