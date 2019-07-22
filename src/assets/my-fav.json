@@ -1,41 +1,41 @@
 [{
-  "name": "Movie 1",
+  "name": "Sherlock Holmes",
   "ratings": 4
 },
 {
-  "name": "Movie 2",
+  "name": "Reservoir Dogs",
   "ratings": 3
 },
 {
-  "name": "Movie 3",
+  "name": "Rocky",
   "ratings": 2
 },
 {
-  "name": "Movie 4",
+  "name": "Terminator 2: Judgment Day",
   "ratings": 1
 },
 {
-  "name": "Movie 5",
+  "name": "Inception",
   "ratings": 5
 },
 {
-  "name": "Movie 6",
+  "name": "Avatar",
   "ratings": 2
 },
 {
-  "name": "Movie 7",
+  "name": "Pirates of the Caribbean: The Curse of the Black Pearl",
   "ratings": 5
 },
 {
-  "name": "Movie 8",
+  "name": "The Godfather",
   "ratings": 5
 },
 {
-  "name": "Movie 9",
+  "name": "The Dark Knight",
   "ratings": 5
 },
 {
-  "name": "Movie 10",
+  "name": "Titanic",
   "ratings": 5
 }
 ]
